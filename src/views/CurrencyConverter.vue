@@ -33,7 +33,9 @@ export default {
   },
   methods: {
     calculateCurrency(e) {
+      // search in vuex store for currency rate
       const currency = this.currencies.find(el => el.currency === e.target.currency.value);
+
       this.result = e.target.rate.value * currency.rate;
     }
   }

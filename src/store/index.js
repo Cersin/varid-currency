@@ -6,6 +6,7 @@ export default createStore({
   },
   mutations: {
     setCurrency(state, payload) {
+      // check if rate with existing currency exist
       if (state.currencies.find(el => el.currency === payload.currency)) {
         state.currencies = state.currencies.filter(item => item.currency !== payload.currency);
       }
