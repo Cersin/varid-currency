@@ -1,6 +1,9 @@
 <template>
   <div class="currency">
-    <CurrencyForm @submitForm="addCurrency"></CurrencyForm>
+    <CurrencyForm @submitForm="addCurrency">
+      <template v-slot:button>Save Currency</template>
+      <template v-slot:rate>Rate</template>
+    </CurrencyForm>
     <router-view></router-view>
   </div>
 

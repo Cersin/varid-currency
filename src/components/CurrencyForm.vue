@@ -7,22 +7,31 @@
     <div class="line"></div>
     <div class="line"></div>
 
-    <label for="currency"><span>New</span> Currency</label>
-    <select id="currency" name="currency">
+    <label for="currency"><span v-if="!currencies">New</span> Currency</label>
+    <select required v-if="currencies" name="currency">
+      <option v-for="el in currencies" :key="el.currency">{{ el.currency }}</option>
+    </select>
+
+    <select v-else id="currency" name="currency">
       <option>USD</option>
       <option selected>EUR</option>
       <option>GBP</option>
     </select>
 
-    <label for="rate">Rate</label>
+    <label for="rate">
+      <slot name="rate"></slot>
+    </label>
     <input required type="number" step="0.01" min="0.01" id="rate" name="rate">
-    <button>Save Currency</button>
+    <button>
+      <slot name="button"></slot>
+    </button>
   </form>
 </template>
 
 <script>
 export default {
-  name: "CurrencyForm"
+  name: "CurrencyForm",
+  props: ['currencies']
 };
 </script>
 
