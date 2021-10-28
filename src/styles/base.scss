@@ -11,3 +11,13 @@ html {
   font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
   font-family: 'Montserrat', sans-serif;
 }
+
+#app {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "sidebar breadcrumb"
+                       "sidebar main";
+  justify-items: start;
+}
