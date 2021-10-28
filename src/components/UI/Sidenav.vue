@@ -20,6 +20,7 @@ export default {
   display: flex;
   grid-area: sidebar;
   gap: 5vh;
+  min-height: 100vh;
   padding-top: 2vh;
   flex-direction: column;
   width: clamp(100px, 20vh, 400px);

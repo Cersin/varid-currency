@@ -31,10 +31,9 @@ export default {
 
 <style scoped lang="scss">
 .currency {
-  align-self: center;
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-self: center;
 }
 
 </style>
