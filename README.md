@@ -1,5 +1,8 @@
 # varid-currency
 
+##LIVE
+https://cersin.github.io/varid-currency/
+
 ## Project setup
 ```
 npm install
