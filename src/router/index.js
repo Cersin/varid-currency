@@ -1,24 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AddCurrency from "../views/AddCurrency";
+import App from "@/App";
 import CurrencyConverter from "@/views/CurrencyConverter";
 import CurrencyTable from "@/views/CurrencyTable";
+import AddCurrency from "@/views/AddCurrency";
 
 const routes = [
   {
     path: '/',
-    name: 'AddCurrency',
-    component: AddCurrency
-  },
-  {
-    path: '/currencyTable',
-    name: 'CurrencyTable',
-    component: CurrencyTable
-  },
-  {
-    path: '/currencyConverter',
-    name: 'CurrencyConverter',
-    component: CurrencyConverter
-  },
+    name: 'App',
+    component: App,
+    redirect: '/addCurrency',
+    children: [
+      {
+        path: '/addCurrency',
+        name: 'AddCurrency',
+        component: AddCurrency
+      },
+      {
+        path: '/currencyTable',
+        name: 'CurrencyTable',
+        component: CurrencyTable
+      },
+      {
+        path: '/currencyConverter',
+        name: 'CurrencyConverter',
+        component: CurrencyConverter
+      }
+    ]
+  }
 ]
 
 const router = createRouter({

@@ -2,11 +2,11 @@
   <table>
     <tr>
       <th>Currency</th>
-      <th>Rate</th>
+      <th>Exchange Rate</th>
     </tr>
     <tr v-for="el in currencies" :key="el.currency">
       <th>{{ el.currency }}</th>
-      <th>{{ el.rate }}</th>
+      <th>{{ el.rate }} PLN</th>
     </tr>
   </table>
 </template>
@@ -30,11 +30,12 @@ export default {
 table {
   margin-top: 10vh;
   border-collapse: collapse;
+  font-size: 1.3rem;
 }
 
 td, th {
   border: 1px solid $color-primary;
-  text-align: left;
+  text-align: center;
   padding: 1rem;
 }
 
@@ -42,6 +43,7 @@ tr {
 
   &:first-child {
     background-color: $color-secondary;
+    font-size: 1.6rem;
   }
 
   &:nth-child(even) {

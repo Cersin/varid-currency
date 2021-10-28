@@ -9,7 +9,7 @@
 
     <label for="rate">Rate</label>
     <input required type="number" step="0.01" min="0.01" id="rate" name="rate">
-    <button>Add Currency</button>
+    <button>Save Currency</button>
   </form>
 </template>
 

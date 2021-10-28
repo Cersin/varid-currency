@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <router-link to="/">Add Currency</router-link>
+    <router-link to="/addCurrency">Add Currency</router-link>
     >
     <router-link to="/currencyTable">Table</router-link>
     >
@@ -20,8 +20,10 @@ export default {
   height: 5vh;
   display: flex;
   gap: .5rem;
+  justify-self: flex-start;
   margin-left: 2rem;
   align-items: center;
+  justify-content: start;
   grid-area: breadcrumb;
 
   a {

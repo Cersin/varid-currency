@@ -1,6 +1,7 @@
 <template>
   <div class="currency">
-    <CurrencyForm ref="currencyForm" @submitForm="addCurrency"></CurrencyForm>
+    <CurrencyForm @submitForm="addCurrency"></CurrencyForm>
+    <router-view></router-view>
   </div>
 
 </template>
@@ -17,7 +18,7 @@ export default {
         currency,
         rate
       } = Object.fromEntries(new FormData(e.target));
-      // we can use here v-model but its easier this way when we don't have real time validation
+      // we can use v-model here but its easier this way when we don't have real time validation
 
       this.$store.dispatch('addToCurrencies', {
         currency,
