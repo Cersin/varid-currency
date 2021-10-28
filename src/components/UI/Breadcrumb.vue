@@ -23,7 +23,7 @@ export default {
   justify-self: flex-start;
   margin-left: 2rem;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   grid-area: breadcrumb;
 
   a {

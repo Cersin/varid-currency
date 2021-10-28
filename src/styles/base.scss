@@ -19,5 +19,5 @@ html {
   grid-template-areas: "sidebar breadcrumb"
                        "sidebar main";
   justify-items: center;
-  align-items: start;
+  align-items: flex-start;
 }
