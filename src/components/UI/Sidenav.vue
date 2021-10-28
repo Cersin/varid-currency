@@ -1,6 +1,6 @@
 <template>
   <div class="sidenav" id="nav">
-    <h2>Currency App</h2>
+    <h2>CURRENCY APP</h2>
     <router-link to="/addCurrency">Add Currency</router-link>
     <router-link to="/currencyTable">Table</router-link>
     <router-link to="/currencyConverter">Converter</router-link>
@@ -32,20 +32,22 @@ export default {
 
   a {
     text-decoration: none;
-    color: $color-secondary;
+    color: $color-white;
     font-size: clamp(1.5rem, 2vh, 2.5rem);
 
     &.router-link-exact-active {
-      color: $color-salomon;
+      background-color: $color-lightDark;
+      padding: .5rem;
+      border-radius: 10px;
     }
 
     &:hover {
-      color: $color-salomon;
+      background-color: $color-lightDark;
     }
   }
 
   h2 {
-    color: $color-orange;
+    color: $color-white;
     text-align: center;
     font-size: clamp(2rem, 3vh, 3rem);
   }

@@ -34,7 +34,7 @@ table {
 }
 
 td, th {
-  border: 1px solid $color-primary;
+  border: 1px solid $color-greyDark;
   text-align: center;
   padding: 1rem;
 }
@@ -42,12 +42,13 @@ td, th {
 tr {
 
   &:first-child {
-    background-color: $color-secondary;
+    background-color: $color-primary;
     font-size: 1.6rem;
+    color: $color-white;
   }
 
   &:nth-child(even) {
-    background-color: $color-salomon;
+    background-color: $color-grey;
   }
 }
 

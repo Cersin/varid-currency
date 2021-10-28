@@ -27,11 +27,12 @@ export default {
   grid-area: breadcrumb;
 
   a {
-    font-weight: bold;
-    color: $color-secondary;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
 
     &.router-link-exact-active {
-      color: $color-salomon;
+      color: $color-primary;
     }
   }
 }
