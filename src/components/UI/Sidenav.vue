@@ -23,12 +23,16 @@ export default {
   min-height: 100vh;
   padding-top: 2vh;
   flex-direction: column;
-  width: clamp(100px, 20vh, 400px);
+  width: 300px;
   z-index: 1;
   background-color: $color-primary;
   overflow-x: hidden;
   transition: 0.5s;
   align-items: center;
+
+  @media only screen and (max-width: 800px) {
+    width: 150px;
+  }
 
   a {
     text-decoration: none;
@@ -49,7 +53,7 @@ export default {
   h2 {
     color: $color-white;
     text-align: center;
-    font-size: clamp(2rem, 3vh, 3rem);
+    font-size: clamp(1.5rem, 2.5vh, 3rem);
   }
 }
 
